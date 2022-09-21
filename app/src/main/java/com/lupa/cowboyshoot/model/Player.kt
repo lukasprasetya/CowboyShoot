@@ -6,6 +6,6 @@ import com.lupa.cowboyshoot.enum.PlayerState
 
 data class Player(
     val playerSide: PlayerSide,
-    val playerState: PlayerState,
-    val playerPosition: PlayerPosition
+    var playerState: PlayerState,
+    var playerPosition: PlayerPosition
 )
