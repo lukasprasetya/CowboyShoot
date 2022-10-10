@@ -5,4 +5,16 @@
     <string name="text_you_lose">You Lose!</string>
     <string name="text_fire">Fire</string>
     <string name="text_restart">Restart</string>
+    <string name="text_title_onboarding_1">Welcome to the Cowboy Shoot</string>
+    <string name="text_desc_onboarding_1">This is a simple game using Android Studio</string>
+    <string name="text_desc_onboarding_2">You need to avoid enemy to win!</string>
+    <string name="text_title_onboarding_2">Let\'s get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Text_hint_name">Name</string>
+    <string name="text_input_your_name">Input Your Name :</string>
+    <string name="text_hi_user">Hi User!</string>
+    <string name="text_subtitle">Wich One Do You Want To Play?</string>
+    <string name="text_player_vs_computer">Player vs Computer</string>
+    <string name="text_player_vs_player">Player vs Player</string>
 </resources>

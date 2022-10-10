@@ -91,16 +91,16 @@ class ComputerEnemyCowboyGameManager(private val listener: CowboyGameListener) :
     private fun getPlayerOneDrawableByState(playerState: PlayerState): Int {
         return when (playerState) {
             PlayerState.IDLE -> R.drawable.ic_cowboy_left_shoot_false
-            PlayerState.SHOOT -> R.drawable.ic_cowboy_left_dead
-            PlayerState.DEAD -> R.drawable.ic_cowboy_left_shoot_true
+            PlayerState.SHOOT -> R.drawable.ic_cowboy_left_shoot_true
+            PlayerState.DEAD -> R.drawable.ic_cowboy_left_dead
         }
     }
 
     private fun getPlayerTwoDrawableByState(playerState: PlayerState): Int {
         return when (playerState) {
             PlayerState.IDLE -> R.drawable.ic_cowboy_right_shoot_false
-            PlayerState.SHOOT -> R.drawable.ic_cowboy_right_dead
-            PlayerState.DEAD -> R.drawable.ic_cowboy_right_shoot_true
+            PlayerState.SHOOT -> R.drawable.ic_cowboy_right_shoot_true
+            PlayerState.DEAD -> R.drawable.ic_cowboy_right_dead
         }
     }
 
@@ -122,12 +122,12 @@ class ComputerEnemyCowboyGameManager(private val listener: CowboyGameListener) :
 
     private fun checkPlayerWinner() {
         val winner = if (playerOne.playerPosition == playerTwo.playerPosition) {
-            setPlayerOneMovement(playerState = PlayerState.DEAD)
-            setPlayerTwoMovement(playerState = PlayerState.SHOOT)
-            playerOne
-        } else {
             setPlayerOneMovement(playerState = PlayerState.SHOOT)
             setPlayerTwoMovement(playerState = PlayerState.DEAD)
+            playerOne
+        } else {
+            setPlayerOneMovement(playerState = PlayerState.DEAD)
+            setPlayerTwoMovement(playerState = PlayerState.SHOOT)
             playerTwo
         }
         setGameState(GameState.FINISHED)
